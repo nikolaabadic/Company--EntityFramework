@@ -1,0 +1,12 @@
+C:\Users\Nikola\source\repos\Company\Company.Domain\bin\Debug\netcoreapp3.1\Company.Domain.deps.json
+C:\Users\Nikola\source\repos\Company\Company.Domain\bin\Debug\netcoreapp3.1\Company.Domain.dll
+C:\Users\Nikola\source\repos\Company\Company.Domain\obj\Debug\netcoreapp3.1\Company.Domain.csprojAssemblyReference.cache
+C:\Users\Nikola\source\repos\Company\Company.Domain\obj\Debug\netcoreapp3.1\Company.Domain.AssemblyInfoInputs.cache
+C:\Users\Nikola\source\repos\Company\Company.Domain\obj\Debug\netcoreapp3.1\Company.Domain.AssemblyInfo.cs
+C:\Users\Nikola\source\repos\Company\Company.Domain\bin\Debug\netcoreapp3.1\Company.Domain.runtimeconfig.json
+C:\Users\Nikola\source\repos\Company\Company.Domain\bin\Debug\netcoreapp3.1\Company.Domain.runtimeconfig.dev.json
+C:\Users\Nikola\source\repos\Company\Company.Domain\obj\Debug\netcoreapp3.1\Company.Domain.genruntimeconfig.cache
+C:\Users\Nikola\source\repos\Company\Company.Domain\bin\Debug\netcoreapp3.1\Company.Domain.pdb
+C:\Users\Nikola\source\repos\Company\Company.Domain\obj\Debug\netcoreapp3.1\Company.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Nikola\source\repos\Company\Company.Domain\obj\Debug\netcoreapp3.1\Company.Domain.dll
+C:\Users\Nikola\source\repos\Company\Company.Domain\obj\Debug\netcoreapp3.1\Company.Domain.pdb
