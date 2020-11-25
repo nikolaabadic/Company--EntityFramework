@@ -68,3 +68,5 @@ C:\Users\Nikola\source\repos\Company\Company.ConsoleApp\obj\Debug\netcoreapp3.1\
 C:\Users\Nikola\source\repos\Company\Company.ConsoleApp\obj\Debug\netcoreapp3.1\Company.ConsoleApp.dll
 C:\Users\Nikola\source\repos\Company\Company.ConsoleApp\obj\Debug\netcoreapp3.1\Company.ConsoleApp.pdb
 C:\Users\Nikola\source\repos\Company\Company.ConsoleApp\obj\Debug\netcoreapp3.1\Company.ConsoleApp.genruntimeconfig.cache
+C:\Users\Nikola\source\repos\Company\Company.ConsoleApp\bin\Debug\netcoreapp3.1\Company.Data.dll
+C:\Users\Nikola\source\repos\Company\Company.ConsoleApp\bin\Debug\netcoreapp3.1\Company.Data.pdb

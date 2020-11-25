@@ -13,7 +13,7 @@ namespace Company.Domain
         public int DepartmentID { get; set; }
         public Department Department { get; set; }
         public List<Payment> Payments { get; set; }
-
+        public List<Responsibility> Tasks { get; set; }
         public override string ToString()
         {
             return $"{EmployeeID} {Name} {Lastname} {Department.Name}";

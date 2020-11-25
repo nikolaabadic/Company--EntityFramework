@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Company.Data.UnitOfWork;
 using Company.Domain;
 using Microsoft.EntityFrameworkCore;
 
@@ -152,6 +153,33 @@ namespace Company.ConsoleApp
 
         //update
         #endregion
+
+        #region Tasks
+        //create
+        public static void AddResponsibilities()
+        {
+            context.Add(new Responsibility { EmployeeID = 11, TaskID = 1 });
+            context.Add(new Responsibility { EmployeeID = 20, TaskID = 2 });
+            context.SaveChanges();
+        }
+        //read
+        public static void SelectEmployeesWithTasks()
+        {
+            var employees = context.Employees.Select(e => new {
+                e.Name,
+                e.Lastname,
+                Tasks = e.Tasks.Select(t => t.Task)
+            }).ToList();
+            foreach(var employee in employees)
+            {
+                foreach(var task in employee.Tasks)
+                {
+                    Console.WriteLine($"{employee.Name} {employee.Lastname} {task}");
+                }
+            }
+        }
+        #endregion
+
         static void Main(string[] args)
         {
             //AddDepartments();
@@ -172,7 +200,15 @@ namespace Company.ConsoleApp
             //AddEmployeeWithPayments();
             //AddPaymentToEmployeeTracking();
             //AddPaymentToEmployeeNoTracking();
-            context.Dispose();
+
+            //AddResponsibilities();
+            //SelectEmployeesWithTasks();
+            //context.Dispose();
+
+            using IUnitOfWork uow = new CompanyUnitOfWork(new CompanyContext());
+            uow.Employee.Add(new Employee { Name = "Severous", Lastname = "Snape", Birthday = new DateTime(1970, 5, 5), DepartmentID = 1 });
+            uow.Task.Add(new Task { Name = "Budget presentation" });
+            uow.Commit();
         }
     }
 }
