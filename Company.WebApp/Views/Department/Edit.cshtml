@@ -1,0 +1,31 @@
+﻿@model Department
+@{ 
+    ViewData["Title"] = "Edit Department";
+}
+
+<h3>Edit Department</h3>
+<div class="container">
+    <form method="post" asp-controller="Department" asp-action="Edit">
+        <label>Name: </label>
+        <input type="text" asp-for="Name" value=@Model.Name /> <br />
+
+        <br />
+        <input type="submit" value="Edit" />
+    </form>
+</div>
+
+<style>
+    form {
+        padding-top: 30px;
+    }
+
+    .container {
+        width: 500px;
+        clear: both;
+    }
+
+        .container input {
+            width: 100%;
+            clear: both;
+        }
+</style>

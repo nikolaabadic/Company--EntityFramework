@@ -1,0 +1,42 @@
+﻿@model List<Employee>
+
+@{
+    ViewData["Title"] = "Employees";
+}
+
+<div style="display:flex; justify-content:flex-end;">
+    <a class="nav-link text-dark" asp-area="" asp-controller="Employee" asp-action="Create">Add Employee</a>
+</div>
+
+<h3>Employees</h3>
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Last name</th>
+            <th>Details</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Employee e in Model)
+        {
+        <tr>
+            <td>@e.EmployeeID</td>
+            <td>@e.Name</td>
+            <td>@e.Lastname</td>
+            <td>
+                <a>@Html.ActionLink("Details", "Details", "Employee", new { id = e.EmployeeID })</a>
+            </td>
+            <td>
+                <a>@Html.ActionLink("Edit employee", "Edit", "Employee", new { id = e.EmployeeID })</a>
+            </td>
+            <td>
+                <a>@Html.ActionLink("Delete employee", "Delete", "Employee", new { id = e.EmployeeID })</a>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,17 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <div style="display:flex; justify-content:space-around; padding-top:100px;">
+        <div>
+            <img src="~/img/employee.png" />
+            <a class="nav-link text-dark" asp-area="" asp-controller="Employee" asp-action="Employee">View Employees</a>
+        </div>
+        <div>
+            <img src="~/img/departments.png" />
+            <a class="nav-link text-dark" asp-area="" asp-controller="Department" asp-action="Department">View Departments</a>
+        </div>
+    </div>
+</div>

@@ -7,5 +7,6 @@ namespace Company.Data
 {
     public interface IRepositoryDepartment : IRepository<Department>
     {
+        public void UpdateDepartment(int id, Department department);
     }
 }

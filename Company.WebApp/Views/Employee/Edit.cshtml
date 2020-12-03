@@ -1,0 +1,39 @@
+﻿@model Employee
+@{
+    ViewData["Title"] = "Edit Employee";
+}
+<h3>Edit Employee</h3>
+<div class="container">
+    <form method="post" asp-controller="Employee" asp-action="Edit">
+        <label>Name: </label>
+        <input type="text" asp-for="Name" value=@Model.Name /> <br />
+
+        <label>Last name: </label>
+        <input type="text" asp-for="Lastname" value=@Model.Lastname /><br />
+
+        <label>Birthday (dd.mm.yyyy): </label>
+        <input type="datetime" asp-for="Birthday" value=@Model.Birthday /><br />
+
+        <label>Department ID: </label>
+        <input type="text" asp-for="DepartmentID" value=@Model.DepartmentID /><br />
+
+        <br />
+        <input type="submit" value="Edit" />
+    </form>
+</div>
+
+<style>
+    form {
+        padding-top: 30px;
+    }
+
+    .container {
+        width: 500px;
+        clear: both;
+    }
+
+        .container input {
+            width: 100%;
+            clear: both;
+        }
+</style>

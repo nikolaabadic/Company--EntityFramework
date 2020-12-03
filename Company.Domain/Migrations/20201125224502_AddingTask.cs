@@ -60,12 +60,12 @@ namespace Company.Domain.Migrations
             migrationBuilder.InsertData(
                 table: "Employees",
                 columns: new[] { "EmployeeID", "Birthday", "DepartmentID", "Lastname", "Name" },
-                values: new object[] { 11, new DateTime(1987, 6, 2, 0, 0, 0, 0, DateTimeKind.Unspecified), 1, "Louis", "Mark" });
+                values: new object[] { 1, new DateTime(1987, 6, 2, 0, 0, 0, 0, DateTimeKind.Unspecified), 1, "Louis", "Mark" });
 
             migrationBuilder.InsertData(
                 table: "Employees",
                 columns: new[] { "EmployeeID", "Birthday", "DepartmentID", "Lastname", "Name" },
-                values: new object[] { 20, new DateTime(1989, 1, 12, 0, 0, 0, 0, DateTimeKind.Unspecified), 2, "Jones", "Luna" });
+                values: new object[] { 2, new DateTime(1989, 1, 12, 0, 0, 0, 0, DateTimeKind.Unspecified), 2, "Jones", "Luna" });
 
             migrationBuilder.CreateIndex(
                 name: "IX_Responsibility_TaskID",

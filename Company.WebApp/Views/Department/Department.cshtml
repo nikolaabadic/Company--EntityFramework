@@ -1,0 +1,40 @@
+﻿@model List<Department>
+
+@{
+    ViewData["Title"] = "Departments";
+}
+
+<div style="display:flex; justify-content:flex-end;">
+    <a class="nav-link text-dark" asp-area="" asp-controller="Department" asp-action="Create">Add Department</a>
+</div>
+
+<h3>Departments</h3>
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Details</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Department d in Model)
+        {
+        <tr>
+            <td>@d.DepartmentID</td>
+            <td>@d.Name</td>
+            <td>
+                <a>@Html.ActionLink("Details", "Details", "Department", new { id = d.DepartmentID })</a>
+            </td>
+            <td>
+                <a>@Html.ActionLink("Edit department", "Edit", "Department", new { id = d.DepartmentID })</a>
+            </td>
+            <td>
+                <a>@Html.ActionLink("Delete department", "Delete", "Department", new { id = d.DepartmentID })</a>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>

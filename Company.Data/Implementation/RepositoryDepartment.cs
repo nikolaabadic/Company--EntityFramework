@@ -1,4 +1,5 @@
 ﻿using Company.Domain;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -32,6 +33,12 @@ namespace Company.Data.Implementation
         public List<Department> GetAll()
         {
             return context.Departments.ToList();
+        }
+
+        public void UpdateDepartment(int id, Department department)
+        {
+            department.DepartmentID = id;
+            context.Update(department);
         }
     }
 }

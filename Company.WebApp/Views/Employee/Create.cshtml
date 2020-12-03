@@ -1,0 +1,40 @@
+﻿@model Employee
+@{
+    ViewData["Title"] = "Create Employee";
+}
+
+<h3>Add Employee</h3>
+<div class="container">
+    <form method="post" asp-controller="Employee" asp-action="Create">
+        <label>Name: </label>
+        <input type="text" asp-for="Name" /> <br />
+
+        <label>Last name: </label>
+        <input type="text" asp-for="Lastname" /><br />
+
+        <label>Birthday (dd.mm.yyyy): </label>
+        <input type="datetime" asp-for="Birthday" /><br />
+
+        <label>Department ID: </label>
+        <input type="text" asp-for="DepartmentID" /><br />
+
+        <br />
+        <input type="submit" value="Add" />
+    </form>
+</div>
+
+<style>
+    form {
+        padding-top: 30px;
+    }
+
+    .container {
+        width: 500px;
+        clear: both;
+    }
+
+        .container input {
+            width: 100%;
+            clear: both;
+        }
+</style>
