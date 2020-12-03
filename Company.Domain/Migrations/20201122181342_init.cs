@@ -52,7 +52,8 @@ namespace Company.Domain.Migrations
                         column: x => x.DepartmentID,
                         principalTable: "Departments",
                         principalColumn: "DepartmentID",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict
+                        );
                 });
 
             migrationBuilder.CreateTable(
@@ -73,7 +74,8 @@ namespace Company.Domain.Migrations
                         column: x => x.EmployeeID,
                         principalTable: "Employees",
                         principalColumn: "EmployeeID",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Cascade
+                       );
                 });
 
             migrationBuilder.CreateIndex(
