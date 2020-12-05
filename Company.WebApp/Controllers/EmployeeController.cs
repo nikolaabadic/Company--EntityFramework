@@ -60,12 +60,12 @@ namespace Company.WebApp.Controllers
         }
 
         [HttpPost]
-        public ActionResult Edit([FromRoute]int id,[FromForm]Employee employee)
+        public ActionResult Edit([FromForm]Employee employee)
         {
             {
                 if (ModelState.IsValid)
                 {
-                    unitOfWork.Employee.UpdateEmployee(id, employee);
+                    unitOfWork.Employee.UpdateEmployee(employee);
                     unitOfWork.Commit();
                     return View("Employee", unitOfWork.Employee.GetAll());
                 }

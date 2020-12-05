@@ -8,6 +8,7 @@
     <form method="post" asp-controller="Department" asp-action="Edit">
         <label>Name: </label>
         <input type="text" asp-for="Name" value=@Model.Name /> <br />
+        <input type="hidden" asp-for="DepartmentID" value=@Model.DepartmentID /> <br />
 
         <br />
         <input type="submit" value="Edit" />

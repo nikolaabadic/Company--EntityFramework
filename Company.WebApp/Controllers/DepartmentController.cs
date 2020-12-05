@@ -60,12 +60,12 @@ namespace Company.WebApp.Controllers
         }
 
         [HttpPost]
-        public ActionResult Edit([FromRoute]int id,[FromForm] Department department)
+        public ActionResult Edit([FromForm] Department department)
         {
             {
                 if (ModelState.IsValid)
                 {
-                    unitOfWork.Department.UpdateDepartment(id, department);
+                    unitOfWork.Department.UpdateDepartment(department);
                     unitOfWork.Commit();
                     return View("Department", unitOfWork.Department.GetAll());
                 }

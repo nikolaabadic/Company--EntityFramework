@@ -35,9 +35,8 @@ namespace Company.Data.Implementation
             return context.Departments.ToList();
         }
 
-        public void UpdateDepartment(int id, Department department)
+        public void UpdateDepartment(Department department)
         {
-            department.DepartmentID = id;
             context.Update(department);
         }
     }

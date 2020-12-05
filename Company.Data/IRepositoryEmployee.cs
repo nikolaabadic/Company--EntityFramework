@@ -7,6 +7,6 @@ namespace Company.Data
 {
     public interface IRepositoryEmployee : IRepository<Employee>
     {
-        public void UpdateEmployee(int id, Employee employee);
+        public void UpdateEmployee(Employee employee);
     }
 }
